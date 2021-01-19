@@ -16,8 +16,8 @@
 
 import React from 'react';
 import classnames from 'classnames';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useUserSaplings } from '../../CanopyContext';
+import Icon from '@material-ui/core/Icon';
 
 import { NavItem } from './NavItem';
 
@@ -44,9 +44,8 @@ export const SideNav = () => {
       </a>
       <div className="nav-items">
         {makeUserSaplingTabs(useUserSaplings())}
-        <hr />
         <div className="nav-tab">
-          <FontAwesomeIcon className="icon" icon="leaf" />
+          <button className="button"><Icon eco_icon>eco_icon</Icon></button>
           <div className="label">Saplings</div>
         </div>
       </div>
@@ -64,7 +63,7 @@ function ProfileTab() {
 
   return (
     <a href="/profile" className={profileClasses}>
-      <FontAwesomeIcon className="icon" icon="user-circle" />
+      <button className="button"><Icon>person_icon</Icon></button>
     </a>
   );
 }
