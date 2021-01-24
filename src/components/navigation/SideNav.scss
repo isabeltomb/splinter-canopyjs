@@ -87,7 +87,7 @@
 
     &:hover {
       .button {
-        background: rgba(255, 255, 255, 0.15) !important;
+        background-color: rgba(255, 255, 255, 0.15) !important;
         cursor: pointer;
       }
     }
@@ -125,7 +125,7 @@
     }
 
     :target {
-      background: rgba(255, 255, 255, 0.15);
+      background-color: rgba(255, 255, 255, 0.15);
     }
 
     &:hover {
