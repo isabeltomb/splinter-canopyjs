@@ -65,7 +65,7 @@ function ProfileTab() {
 
   return (
     <a href="/profile#profile" className={profileClasses}>
-      <div id="profile" className="icon"><Icon>person_icon</Icon></div>
+      <icon id="profile"><Icon>person_icon</Icon></icon>
     </a>
   );
 }
