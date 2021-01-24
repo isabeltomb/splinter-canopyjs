@@ -28,7 +28,7 @@ export const NavItem = props => {
 
   return (
     <a href={path} className={classes}>
-      <button className="button"><Icon>{logo}</Icon></button>
+      <div className="icon"><Icon>{logo}</Icon></div>
       <div className="label">{label}</div>
     </a>
   );

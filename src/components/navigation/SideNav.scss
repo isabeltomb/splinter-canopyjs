@@ -65,7 +65,7 @@
     text-decoration: none;
     transition: $transitionDuration-s;
 
-    .button {
+    .icon {
       background-color: #FFFFFF;
       display: flex;
       justify-content: center;
@@ -87,7 +87,7 @@
     }
 
     &:hover {
-      .button {
+      .icon {
         background-color: rgba(255, 255, 255, 0.15);
         cursor: pointer;
       }
@@ -111,7 +111,7 @@
     height: 75px;
     text-decoration: none;
 
-    .button {
+    .icon {
       background-color: #FFFFFF;
       display: flex;
       justify-content: center;
@@ -126,13 +126,13 @@
     }
 
     :target {
-      .button{ 
+      .icon{ 
         background-color: rgba(255, 255, 255, 0.15); 
       }
     }
 
     &:hover {
-      .button {
+      .icon {
         background-color: rgba(255, 255, 255, 0.15);
       }
     }
