@@ -22,6 +22,8 @@ import Icon from '@material-ui/core/Icon';
 import { NavItem } from './NavItem';
 
 export const SideNav = () => {
+  window.addEventListener('load', setCurr);
+  window.addEventListener('hashchange', setCurr);
   const makeUserSaplingTabs = userSaplings =>
     userSaplings
       .map(({ displayName, namespace, icon }) => {
@@ -62,8 +64,8 @@ function ProfileTab() {
   });
 
   return (
-    <a id="profile" href="/profile#profile" className={profileClasses}>
-      <div className="icon"><Icon>person_icon</Icon></div>
+    <a href="/profile#profile" className={profileClasses}>
+      <div id="profile" className="icon"><Icon>person_icon</Icon></div>
     </a>
   );
 }
