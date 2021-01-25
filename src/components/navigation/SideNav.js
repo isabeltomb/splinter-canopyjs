@@ -71,11 +71,11 @@ function ProfileTab() {
 }
 
 function setCurr(ev) {
-  let div, a, id;
+  let icon;
 
-  div = document.querySelector(':target');
-  console.log(ev.type, div);
-  if(div) {
-    div.classList.add('current');
+  icon = document.querySelector(':target');
+  console.log(ev.type, icon);
+  if(icon) {
+    icon.classList.add('current');
   }
 }
