@@ -86,6 +86,10 @@
       color: #FFFFFF;
     }
 
+    :target {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
     &:hover {
       .icon {
         background-color: rgba(255, 255, 255, 0.15);
@@ -125,7 +129,7 @@
       transition: $transitionDuration-s;
     }
 
-    #profile-page:target {
+    :target {
         background-color: rgba(255, 255, 255, 0.15);
     }
 
