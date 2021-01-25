@@ -64,19 +64,20 @@ function ProfileTab() {
   });
 
   return (
-    <a id="Profile" href="/profile#Profile" className={profileClasses}>
-      <div className="icon"><Icon>person_icon</Icon></div>
+    <a href="/profile#Profile" className={profileClasses}>
+      <div id="Profile" className="icon"><Icon>person_icon</Icon></div>
     </a>
   );
 }
 
 function setCurr(ev) {
-  let a, id;
+  let div, a, id;
 
-  a = document.querySelector(':target');
-  console.log(ev.type, a);
-  if(a) {
+  div = document.querySelector(':target');
+  console.log(ev.type, p);
+  if(div) {
     id = `a[href="#${a.id}"]`;
+    console.log(id)
     a = document.querySelector(id);
     a.classList.add('current');
   }
