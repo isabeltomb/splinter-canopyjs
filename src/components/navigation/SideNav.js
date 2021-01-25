@@ -79,6 +79,9 @@ function setCurr(ev) {
     id = `a[href="#${div.id}"]`;
     console.log(id)
     div = document.querySelector(id);
-    div.classList.add('current');
+    console.log(div)
+    a = document.querySelector(id);
+    console.log(a)
+    a.classList.add('current');
   }
 }
