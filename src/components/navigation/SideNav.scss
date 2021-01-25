@@ -93,22 +93,6 @@
       }
     }
   }
-
-  .nav-tab.page-active {
-    .icon {
-      background-color: rgba(255, 255, 255, 0.15);
-      display: flex;
-      justify-content: center;
-      border: none;
-      color: var(--color-primary);
-      width: 37px;
-      height: 37px;
-      align-items: center;
-      border-radius: 10px;
-      outline: none;
-      transition: $transitionDuration-s;
-    }
-  }
 }
 
 .canopy-items {
@@ -152,21 +136,6 @@
       .icon {
         background-color: rgba(255, 255, 255, 0.15);
       }
-    }
-  }
-  .nav-tab.page-active {
-    .icon {
-      background-color: rgba(255, 255, 255, 0.15);
-      display: flex;
-      justify-content: center;
-      border: none;
-      color: var(--color-primary);
-      width: 37px;
-      height: 37px;
-      align-items: center;
-      border-radius: 10px;
-      outline: none;
-      transition: $transitionDuration-s;
     }
   }
 }
