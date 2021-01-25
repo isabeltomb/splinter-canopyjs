@@ -26,11 +26,9 @@ export const NavItem = props => {
     'page-active': path === `/${window.location.pathname.split('/')[1]}`
   });
 
-  path = `${path}#${label}`;
-
   return (
     <a href={path} className={classes}>
-      <div id={label} className="icon"><Icon>{logo}</Icon></div>
+      <div className="icon"><Icon>{logo}</Icon></div>
       <div className="label">{label}</div>
     </a>
   );

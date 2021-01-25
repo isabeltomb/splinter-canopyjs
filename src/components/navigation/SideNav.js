@@ -63,22 +63,22 @@ function ProfileTab() {
   });
 
   return (
-    <a href="/profile#Profile" className={profileClasses}>
-      <div id="Profile" className="icon"><Icon>person_icon</Icon></div>
+    <a href="/profile" className={profileClasses}>
+      <div className="icon"><Icon>person_icon</Icon></div>
       <div className="label">Profile</div>
     </a>
   );
 }
 
-function setCurr(ev) {
-  let icon;
+// function setCurr(ev) {
+//   let icon;
 
-  icon = document.querySelector(':target');
-  console.log(ev.type, icon);
-  if(icon) {
-    icon.classList.add('current');
-  }
-}
+//   icon = document.querySelector(':target');
+//   console.log(ev.type, icon);
+//   if(icon) {
+//     icon.classList.add('current');
+//   }
+// }
 
 // function setCurr(ev) {
 //   let icon;
