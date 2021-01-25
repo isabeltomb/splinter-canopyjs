@@ -47,7 +47,7 @@ export const SideNav = () => {
       <div className="nav-items">
         {makeUserSaplingTabs(useUserSaplings())}
         <div className="nav-tab">
-          <div id="saplings-page" className="icon"><Icon eco_icon>eco_icon</Icon></div>
+          <div className="icon"><Icon eco_icon>eco_icon</Icon></div>
           <div className="label">Saplings</div>
         </div>
       </div>
@@ -64,8 +64,8 @@ function ProfileTab() {
   });
 
   return (
-    <a href="/profile#Profile" className={profileClasses}>
-      <div id="Profile" className="icon"><Icon>person_icon</Icon></div>
+    <a id="Profile" href="/profile#Profile" className={profileClasses}>
+      <div className="icon"><Icon>person_icon</Icon></div>
     </a>
   );
 }
