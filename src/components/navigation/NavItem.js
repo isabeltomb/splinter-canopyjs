@@ -23,8 +23,9 @@ export const NavItem = props => {
   let { path, logo, label } = props;
 
   const classes = classnames('nav-tab', {
-    'page-active': `${window.location.pathname.split('/')[1]}` === path
+    'page-active': path === `/${window.location.pathname.split('/')[1]}`
   });
+
   path = `${path}#${label}`;
 
   return (
