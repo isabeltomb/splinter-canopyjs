@@ -23,7 +23,7 @@ import { NavItem } from './NavItem';
 
 export const SideNav = () => {
   window.addEventListener('load', setCurr);
-  window.addEventListener('hashchange', setCurr);
+  // window.addEventListener('hashchange', setCurr);
   const makeUserSaplingTabs = userSaplings =>
     userSaplings
       .map(({ displayName, namespace, icon }) => {
@@ -70,6 +70,14 @@ function ProfileTab() {
   );
 }
 
-// function setCurr(ev) {
-//   let 
-// }
+function setCurr(ev) {
+  let a, id;
+
+  p = document.querySelector(':target');
+  console.log(ev.type, a);
+  if(a) {
+    id = `a[href="#${a.id}"]`;
+    a = document.querySelector(id);
+    a.classList.add('current');
+  }
+}
