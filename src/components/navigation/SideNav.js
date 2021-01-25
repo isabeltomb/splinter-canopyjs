@@ -65,7 +65,11 @@ function ProfileTab() {
 
   return (
     <a href="/profile#profile" className={profileClasses}>
-      <icon id="profile"><Icon>person_icon</Icon></icon>
+      <div className="icon" id="profile"><Icon>person_icon</Icon></div>
     </a>
   );
 }
+
+// function setCurr(ev) {
+//   let 
+// }
