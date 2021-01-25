@@ -70,15 +70,15 @@ function ProfileTab() {
   );
 }
 
-function setCurr(ev) {
-  let div, a, id;
+// function setCurr(ev) {
+//   let div, a, id;
 
-  div = document.querySelector('page-active');
-  console.log(ev.type, div);
-  if(div) {
-    id = `a[href="#${div.id}"]`;
-    console.log(id)
-    div = document.querySelector(id);
-    div.classList.add('current');
-  }
-}
+//   div = document.querySelector(':target');
+//   console.log(ev.type, div);
+//   if(div) {
+//     id = `a[href="#${div.id}"]`;
+//     console.log(id)
+//     a = document.querySelector(id);
+//     a.classList.add('current');
+//   }
+// }
