@@ -20,7 +20,7 @@ import classnames from 'classnames';
 import Icon from '@material-ui/core/Icon';
 
 export const NavItem = props => {
-  const { path, logo, label } = props;
+  let { path, logo, label } = props;
   const path = `"${path}#${label}"`;
 
   const classes = classnames('nav-tab', {
