@@ -74,7 +74,7 @@ function setCurr(ev) {
   let div, a, id;
 
   div = document.querySelector(':target');
-  console.log(ev.type, p);
+  console.log(ev.type, div);
   if(div) {
     id = `a[href="#${a.id}"]`;
     console.log(id)
