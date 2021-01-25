@@ -21,7 +21,7 @@ import Icon from '@material-ui/core/Icon';
 
 export const NavItem = props => {
   let { path, logo, label } = props;
-  const path = `"${path}#${label}"`;
+  path = `"${path}#${label}"`;
 
   const classes = classnames('nav-tab', {
     'page-active': path === `/${window.location.pathname.split('/')[1]}`
