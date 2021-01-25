@@ -23,7 +23,6 @@ import { NavItem } from './NavItem';
 
 export const SideNav = () => {
   window.addEventListener('load', setCurr);
-  window.addEventListener('hashchange', setCurr);
   const makeUserSaplingTabs = userSaplings =>
     userSaplings
       .map(({ displayName, namespace, icon }) => {
@@ -77,12 +76,6 @@ function setCurr(ev) {
   div = document.querySelector(':target');
   console.log(ev.type, div);
   if(div) {
-    // id = `div[id="${div.id}"]`;
-    // console.log(id)
-    // div = document.querySelector(id);
-    // console.log(div)
-    // a = document.querySelector(id);
-    // console.log(a)
     div.classList.add('current');
   }
 }

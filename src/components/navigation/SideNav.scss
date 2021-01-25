@@ -79,15 +79,15 @@
       transition: $transitionDuration-s;
     }
 
+    :target {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
     .label {
       margin-top: 10px;
       font-size: 11px;
       text-align: center;
       color: #FFFFFF;
-    }
-
-    :target {
-      background-color: rgba(255, 255, 255, 0.15);
     }
 
     &:hover {
@@ -131,6 +131,13 @@
 
     :target {
         background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .label {
+      margin-top: 10px;
+      font-size: 11px;
+      text-align: center;
+      color: #FFFFFF;
     }
 
     &:hover {
