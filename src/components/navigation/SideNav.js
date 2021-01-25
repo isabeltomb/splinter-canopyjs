@@ -73,12 +73,12 @@ function ProfileTab() {
 function setCurr(ev) {
   let div, a, id;
 
-  div = document.querySelector(':target');
+  div = document.querySelector('page-active');
   console.log(ev.type, div);
   if(div) {
     id = `a[href="#${div.id}"]`;
     console.log(id)
-    a = document.querySelector(id);
-    a.classList.add('current');
+    div = document.querySelector(id);
+    div.classList.add('current');
   }
 }
