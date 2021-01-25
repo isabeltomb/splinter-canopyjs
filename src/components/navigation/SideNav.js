@@ -76,7 +76,7 @@ function setCurr(ev) {
   div = document.querySelector(':target');
   console.log(ev.type, div);
   if(div) {
-    id = `a[href="#${a.id}"]`;
+    id = `a[href="#${div.id}"]`;
     console.log(id)
     a = document.querySelector(id);
     a.classList.add('current');
