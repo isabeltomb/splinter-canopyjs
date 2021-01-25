@@ -79,3 +79,13 @@ function setCurr(ev) {
     icon.classList.add('current');
   }
 }
+
+// function setCurr(ev) {
+//   let icon;
+
+//   icon = document.getElementsByClassName("page-active");
+//   console.log(ev.type, icon);
+//   if(icon) {
+//     icon[0].classList.add('current');
+//   }
+// }
