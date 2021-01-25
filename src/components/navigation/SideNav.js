@@ -73,7 +73,7 @@ function ProfileTab() {
 function setCurr(ev) {
   let a, id;
 
-  p = document.querySelector(':target');
+  a = document.querySelector(':target');
   console.log(ev.type, a);
   if(a) {
     id = `a[href="#${a.id}"]`;
