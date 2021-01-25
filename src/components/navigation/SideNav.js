@@ -22,7 +22,6 @@ import Icon from '@material-ui/core/Icon';
 import { NavItem } from './NavItem';
 
 export const SideNav = () => {
-  window.addEventListener('load', setCurr);
   const makeUserSaplingTabs = userSaplings =>
     userSaplings
       .map(({ displayName, namespace, icon }) => {
