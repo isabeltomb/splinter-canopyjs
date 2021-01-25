@@ -23,6 +23,7 @@ import { NavItem } from './NavItem';
 
 export const SideNav = () => {
   window.addEventListener('load', setCurr);
+  window.addEventListener('hashchange', setCurr);
   const makeUserSaplingTabs = userSaplings =>
     userSaplings
       .map(({ displayName, namespace, icon }) => {
