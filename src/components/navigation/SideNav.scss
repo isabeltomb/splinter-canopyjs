@@ -93,6 +93,12 @@
       }
     }
   }
+  .page-active {
+    @extend .nav-tab;
+    .icon {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
 }
 
 .canopy-items {
@@ -136,6 +142,13 @@
       .icon {
         background-color: rgba(255, 255, 255, 0.15);
       }
+    }
+  }
+
+  .page-active {
+    @extend .tab;
+    .icon {
+      background-color: rgba(255, 255, 255, 0.15);
     }
   }
 }
