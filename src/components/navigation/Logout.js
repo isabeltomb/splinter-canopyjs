@@ -20,35 +20,39 @@ import { get } from '../../request';
 
 export const Logout = () => {
   const onLogout = async () => {
-    const { splinterURL } = window.$CANOPY.getSharedConfig().canopyConfig;
-    const { token } = JSON.parse(window.sessionStorage.getItem('CANOPY_USER'));
+    if (window.sessionStorage.getItem('CANOPY_USER')) {
+      const { splinterURL } = window.$CANOPY.getSharedConfig().canopyConfig;
+      const { token } = JSON.parse(window.sessionStorage.getItem('CANOPY_USER'));
 
-    sessionStorage.removeItem('CANOPY_USER');
-    if (window.sessionStorage.getItem('CANOPY_KEYS')) {
-      window.sessionStorage.removeItem('CANOPY_KEYS');
-      if (window.sessionStorage.getItem('KEY_SECRET')) {
-        window.sessionStorage.removeItem('KEY_SECRET');
-      }
-    }
-
-    if (sessionStorage.getItem('LOGOUT')) {
-      try {
-        await get(
-          `${splinterURL}${window.sessionStorage.getItem('LOGOUT')}`,
-          request => {
-            request.setRequestHeader('Authorization', `Bearer ${token}`);
-          }
-        );
-        window.sessionStorage.removeItem('LOGOUT');
-        window.location.href = `${window.location.origin}/login`;
-      } catch (err) {
-        switch (err.status) {
-          case 401:
-            window.location.href = `${window.location.origin}/login`;
-            break;
-          default:
-            break;
+      sessionStorage.removeItem('CANOPY_USER');
+      if (window.sessionStorage.getItem('CANOPY_KEYS')) {
+        window.sessionStorage.removeItem('CANOPY_KEYS');
+        if (window.sessionStorage.getItem('KEY_SECRET')) {
+          window.sessionStorage.removeItem('KEY_SECRET');
         }
+      }
+
+      if (sessionStorage.getItem('LOGOUT')) {
+        try {
+          await get(
+            `${splinterURL}${window.sessionStorage.getItem('LOGOUT')}`,
+            request => {
+              request.setRequestHeader('Authorization', `Bearer ${token}`);
+            }
+          );
+          window.sessionStorage.removeItem('LOGOUT');
+          window.location.href = `${window.location.origin}/login`;
+        } catch (err) {
+          switch (err.status) {
+            case 401:
+              window.location.href = `${window.location.origin}/login`;
+              break;
+            default:
+              break;
+          }
+        }
+      } else {
+        window.location.href = `${window.location.origin}/login`;
       }
     } else {
       window.location.href = `${window.location.origin}/login`;
